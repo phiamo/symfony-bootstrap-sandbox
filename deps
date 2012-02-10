@@ -81,3 +81,4 @@
 [knpmenu]
     git = "http://github.com/KnpLabs/KnpMenu.git"
     target = "/knpmenu"
+

@@ -20,7 +20,6 @@ app/cache/*
 app/logs/*
 vendor/
 web/bundles/
-app/config/parameters.ini
 web/css/*
 web/js/*
 web/media/*
