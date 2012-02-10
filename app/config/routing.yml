@@ -6,3 +6,7 @@
 _mopa_bootstrap:
     resource: "@MopaBootstrapBundle/Controller"
     type:     annotation
+    
+_welcome:
+    pattern:   /
+    defaults:  { _controller: MopaBootstrapBundle:Examples:index }
