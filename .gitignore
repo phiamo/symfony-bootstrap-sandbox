@@ -1,0 +1,34 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+## IDE files to ignore
+nbproject/
+.idea/
+*.tmproj
+.buildpath
+.project
+.settings/
+
+# envvars
+bin/envvars
+
+app/cache/*
+app/logs/*
+vendor/
+web/bundles/
+app/config/parameters.ini
+web/css/*
+web/js/*
+web/media/*
+
+
+# to have the possibility to have an own htaccess e.g. with protection (as on prod)
+web/.htaccess
+
+
+# ignore paypal so everone can have its own
+app/config/paypal.yml
