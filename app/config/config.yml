@@ -72,5 +72,5 @@ jms_security_extra:
 
     
 mopa_bootstrap:
-    topbar: ~
+    navbar: ~
     form: ~
