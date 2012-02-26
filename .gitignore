@@ -18,7 +18,7 @@ bin/envvars
 
 app/cache/*
 app/logs/*
-vendor/
+vendor/*
 web/bundles/
 web/css/*
 web/js/*
