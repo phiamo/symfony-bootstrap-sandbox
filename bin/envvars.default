@@ -1,0 +1,3 @@
+# envvars - default environment variables for apache2ctl
+export APACHE_RUN_USER=www-data
+export APACHE_RUN_GROUP=www-data

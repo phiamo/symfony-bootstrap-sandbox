@@ -32,7 +32,7 @@ assetic:
     filters:
         less:
             node: /usr/bin/node
-            node_paths: [/usr/lib/node_modules]
+            node_paths: [/opt/lessc/lib, /usr/lib/node_modules]
         cssrewrite: ~
         cssembed:
             jar: %kernel.root_dir%/Resources/java/cssembed-0.3.6.jar
