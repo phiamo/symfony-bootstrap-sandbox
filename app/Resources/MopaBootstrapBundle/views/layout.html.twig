@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8" />
 {% block head_style %}
-{% stylesheets filter='less,cssembed,?yui_css'
-	    	'@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
-	    %}
+{% stylesheets
+    '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+%}
 <link href="{{ asset_url }}" type="text/css" rel="stylesheet"
 	media="screen" />
 {% endstylesheets %}
@@ -70,8 +70,7 @@
 	    	'@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-carousel.js'
 	    	'@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-typeahead.js'
 	    	'@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
-	    	filter="?yui_js"
-	    %}
+    %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
 {% endblock foot_script %}
