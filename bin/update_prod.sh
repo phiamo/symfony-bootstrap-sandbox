@@ -21,6 +21,8 @@ if [ -e "/etc/init.d/apache2" ]; then
 elif [ -e "/etc/init.d/nginx" ]; then
     sudo /etc/init.d/nginx restart
     sudo /etc/init.d/php5-fpm restart
+elif [ -e "/etc/init.d/lighttpd" ]; then
+    sudo /etc/init.d/lighttpd restart
 else
     echo "NOT WEBSERVER FOUND!"
 fi
