@@ -20,7 +20,11 @@ monolog:
             level: info
 
 assetic:
+    debug:          %kernel.debug%
     use_controller: true
+    filters:
+        yui_js:
+            jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar
 
 
 services:
