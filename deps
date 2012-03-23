@@ -76,7 +76,6 @@
 
 [knp-components]
     git=http://github.com/KnpLabs/knp-components.git
-    version="v1.0"
     
 [knpmenu]
     git = "http://github.com/KnpLabs/KnpMenu.git"
