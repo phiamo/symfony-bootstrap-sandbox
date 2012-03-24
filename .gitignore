@@ -30,4 +30,4 @@ web/.htaccess
 
 
 # ignore paypal so everone can have its own
-app/config/paypal.yml
+app/config/parameters.yml
