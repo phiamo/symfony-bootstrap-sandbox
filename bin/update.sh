@@ -16,6 +16,7 @@ APP="app/console"
 APACHE_RUN_USER="${APACHE_RUN_USER-www-data}"
 APACHE_RUN_GROUP="${APACHE_RUN_GROUP-www-data}"
 dirs="${dirs-app/cache app/logs}"
+COMPOSER="$(which composer.phar)"
 UPDATEPROD=0
 WITHDB=0
 
@@ -53,8 +54,8 @@ done
 
 dirs="${dirs-app/cache app/logs web/media/ web/images/barcode_playground}"
 
-MDBOTHBEFORE="$(md5sum deps deps.lock)"
-MDLOCKBEFORE="$(md5sum deps.lock)"
+MDBOTHBEFORE="$(md5sum composer.json composer.lock)"
+MDLOCKBEFORE="$(md5sum composer.lock)"
 
 
 #pre setup
@@ -65,19 +66,13 @@ mkdir -p web/media
 git pull
 git submodule init
 git submodule update
-MDBOTHAFTER="$(md5sum deps deps.lock)"
-MDLOCKAFTER="$(md5sum deps.lock)"
+MDBOTHAFTER="$(md5sum composer.json composer.lock)"
+MDLOCKAFTER="$(md5sum composer.lock)"
 if [ "$MDBOTHBEFORE" != "$MDBOTHAFTER" ]; then
-    bin/vendors install
+    $COMPOSER install
 elif [ "$MDLOCKBEFORE" != "$MDLOCKAFTER" ]; then
-    bin/vendors install
+    $COMPOSER update
 fi
-
-# init bootstrap
-cd vendor/bundles/Mopa/BootstrapBundle
-git submodule init
-git submodule update
-cd ../../../../
 
 if [ $WITHDB = 1 ]; then
 # create db
