@@ -65,7 +65,7 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "1e39cf16860cf02303bebd4b62e43cf1c41c350b"
+            "source-reference": "aed8766249b58cc9ff33642186675a14a5a61848"
         },
         {
             "package": "sensio/distribution-bundle",
@@ -75,7 +75,7 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "6e3cccb66d3577fdbd5b6935a5d6b8bed8d47768"
+            "source-reference": "18884a8851df5ea5a77dcd816b97d9e67e28579e"
         },
         {
             "package": "sensio/generator-bundle",
@@ -109,7 +109,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "a00ae273a681cc4019cc457768d5265c958d9299",
+            "source-reference": "cd56d09012b8fcd80e62deedd85a9828bf717a2c",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
