@@ -18,8 +18,8 @@
         "sensio/generator-bundle": "dev-master",
         "jms/security-extra-bundle": "1.1.0",
         "jms/di-extra-bundle": "1.0.1",
-        "mopa/bootstrap-bundle": "dev-master"
-        "twitter/bootstrap": "master"
+        "mopa/bootstrap-bundle": "dev-master",
+        "twitter/bootstrap": "master",
         "mopa/bootstrap-sandbox-bundle": "dev-master"
     },
     "scripts": {
