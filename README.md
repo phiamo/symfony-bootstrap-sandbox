@@ -8,10 +8,12 @@ This is the sandbox of the MopaBootstrapBundle for Symfony2
 - [MopaBootstrapBundle](http://github.com/phiamo/MopaBootstrapBundle) - Easy integration of twitters bootstrap into symfony2
 
 
-Just download install node and less and it should run immediatly!
+Optional but recommended: [Less installation](https://github.com/phiamo/MopaBootstrapBundle/blob/master/Resources/doc/less_installation.md)
 
-If it doesnt, open issues make PR's etc.
+We have a instance of this running here: 
+    http://bootstrap.mohrenweiserpartner.de/mopa/bootstrap
+    
+So it should work, "out of the box", but if it doesnt, open issues make PR's etc.
 
-We just started with this!
 
 
