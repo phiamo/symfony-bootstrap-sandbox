@@ -55,8 +55,6 @@ done
 dirs="${dirs-app/cache app/logs web/media/ web/images/barcode_playground}"
 
 MDBOTHBEFORE="$(md5sum composer.json composer.lock)"
-MDLOCKBEFORE="$(md5sum composer.lock)"
-
 
 #pre setup
 rm -rf web/media/cache/_*
@@ -67,12 +65,10 @@ git pull
 git submodule init
 git submodule update
 MDBOTHAFTER="$(md5sum composer.json composer.lock)"
-MDLOCKAFTER="$(md5sum composer.lock)"
 if [ "$MDBOTHBEFORE" != "$MDBOTHAFTER" ]; then
     $COMPOSER install
-elif [ "$MDLOCKBEFORE" != "$MDLOCKAFTER" ]; then
-    $COMPOSER update
 fi
+$COMPOSER update
 
 if [ $WITHDB = 1 ]; then
 # create db

@@ -1,6 +1,8 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: @MopaBootstrapBundle/Resources/config/examples/example_menu.yml }
+    - { resource: @MopaBootstrapBundle/Resources/config/examples/example_navbar.yml }
 
 framework:
     #esi:             ~
