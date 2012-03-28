@@ -1,5 +1,5 @@
 {
-    "hash": "b33ae2cf7721165bb9669190b627beb4",
+    "hash": "e6c5c762606d47d710d0c0f7c4fef8a8",
     "packages": [
         {
             "package": "doctrine/common",
@@ -12,7 +12,7 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "90e39fb7ff5b4c13577602dab7e08c90067160b4"
+            "source-reference": "08f1764e860b684d7574448a6840b08804a516d9"
         },
         {
             "package": "doctrine/orm",
@@ -65,7 +65,7 @@
         {
             "package": "mopa/bootstrap-bundle",
             "version": "dev-master",
-            "source-reference": "aed8766249b58cc9ff33642186675a14a5a61848"
+            "source-reference": "c7905d9fb807869da720d4b4f6c8828a19406e35"
         },
         {
             "package": "sensio/distribution-bundle",
@@ -109,7 +109,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "cd56d09012b8fcd80e62deedd85a9828bf717a2c",
+            "source-reference": "1bb6e0de4d2edfc84c8229ab05fb2f15d9e3c069",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
