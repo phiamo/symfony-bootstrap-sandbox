@@ -4,9 +4,9 @@
 #   prefix:   /_internal
 
 _mopa_bootstrap:
-    resource: "@MopaBootstrapBundle/Controller"
+    resource: "@MopaBootstrapSandboxBundle/Controller"
     type:     annotation
     
 _welcome:
     pattern:   /
-    defaults:  { _controller: MopaBootstrapBundle:Examples:index }
+    defaults:  { _controller: MopaBootstrapSandboxBundle:Examples:index }
