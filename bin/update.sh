@@ -19,6 +19,7 @@ dirs="${dirs-app/cache app/logs}"
 COMPOSER="$(which composer.phar)"
 UPDATEPROD=0
 WITHDB=0
+WITHCOMPOSERUPDATE=1
 
 function usage() {
     cat << EOF
@@ -29,11 +30,12 @@ This script updates a sf2 environment
 OPTIONS:
    -p Update prod env after dev env
    -d With db reset
+   -c Skip composer
    -h Show this help
 EOF
 }
 
-while getopts "hpd:" OPTION ; do
+while getopts "hpcd:" OPTION ; do
     case $OPTION in
         h)
             usage
@@ -41,6 +43,9 @@ while getopts "hpd:" OPTION ; do
             ;;
         p)
             UPDATEPROD=1
+            ;;
+        c)
+            WITHCOMPOSERUPDATE=0
             ;;
         d)
             WITHDB=1
@@ -65,10 +70,12 @@ git pull
 git submodule init
 git submodule update
 MDBOTHAFTER="$(md5sum composer.json composer.lock)"
-if [ "$MDBOTHBEFORE" != "$MDBOTHAFTER" ]; then
-    $COMPOSER install
+if [ $WITHCOMPOSERUPDATE == 1 ]; then
+    if [ "$MDBOTHBEFORE" != "$MDBOTHAFTER" ]; then
+        $COMPOSER install
+    fi 
+    $COMPOSER update
 fi
-$COMPOSER update
 
 if [ $WITHDB = 1 ]; then
 # create db
