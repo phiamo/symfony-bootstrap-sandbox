@@ -6,7 +6,7 @@
     },
     "require": {
         "php": ">=5.3.2",
-        "symfony/symfony": "2.1.*",
+        "symfony/symfony": "2.1.x-dev",
         "doctrine/orm": "2.2.0",
         "doctrine/doctrine-bundle": "dev-master",
         "twig/extensions": "dev-master",
@@ -18,8 +18,12 @@
         "sensio/generator-bundle": "dev-master",
         "jms/security-extra-bundle": "1.1.0",
         "jms/di-extra-bundle": "1.0.1",
+        "mopa/bootstrap-bundle": "dev-master",
         "mopa/bootstrap-sandbox-bundle": "dev-master",
-        "twitter/bootstrap": "master"
+        "twitter/bootstrap": "master",
+        "knplabs/knp-paginator-bundle": "dev-master",
+        "knplabs/knp-menu-bundle": "dev-master",
+        "craue/formflow-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
