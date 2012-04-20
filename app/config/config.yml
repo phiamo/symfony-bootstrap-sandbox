@@ -47,7 +47,6 @@ assetic:
             apply_to: "\.css$"
         yui_js:
             jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar
-        
 
 # Doctrine Configuration
 doctrine:
@@ -70,7 +69,7 @@ swiftmailer:
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
-    
+
 mopa_bootstrap:
     navbar: ~
     form: ~
