@@ -6,6 +6,7 @@
 *.out
 
 ## IDE files to ignore
+bootstrap.sublime-workspace
 nbproject/
 .idea/
 *.tmproj
