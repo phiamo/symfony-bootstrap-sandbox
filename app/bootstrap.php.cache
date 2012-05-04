@@ -206,7 +206,7 @@ class Container implements IntrospectableContainerInterface
             throw new ServiceNotFoundException($id);
         }
     }
-    
+
     
     public function initialized($id)
     {
@@ -444,7 +444,6 @@ use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Symfony\Component\HttpKernel\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\MergeExtensionConfigurationPass;
 use Symfony\Component\HttpKernel\DependencyInjection\AddClassesToCachePass;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension as DIExtension;
 use Symfony\Component\HttpKernel\Debug\ErrorHandler;
 use Symfony\Component\HttpKernel\Debug\ExceptionHandler;
 use Symfony\Component\Config\Loader\LoaderResolver;
@@ -1083,6 +1082,7 @@ class ClassCollectionLoader
                     $inNamespace = false;
                     --$i;
                 } else {
+                    $output = rtrim($output);
                     $output .= "\n{";
                     $inNamespace = true;
                 }
@@ -1103,7 +1103,7 @@ class ClassCollectionLoader
     {
         $tmpFile = tempnam(dirname($file), basename($file));
         if (false !== @file_put_contents($tmpFile, $content) && @rename($tmpFile, $file)) {
-            chmod($file, 0777);
+            chmod($file, 0666 & ~umask());
 
             return;
         }
@@ -1544,7 +1544,7 @@ class ConfigCache
 
         $tmpFile = tempnam(dirname($this->file), basename($this->file));
         if (false !== @file_put_contents($tmpFile, $content) && @rename($tmpFile, $this->file)) {
-            chmod($this->file, 0666);
+            chmod($this->file, 0666 & ~umask());
         } else {
             throw new \RuntimeException(sprintf('Failed to write cache file "%s".', $this->file));
         }
@@ -1553,7 +1553,7 @@ class ConfigCache
             $file = $this->file.'.meta';
             $tmpFile = tempnam(dirname($file), basename($file));
             if (false !== @file_put_contents($tmpFile, serialize($metadata)) && @rename($tmpFile, $file)) {
-                chmod($file, 0666);
+                chmod($file, 0666 & ~umask());
             }
         }
     }
