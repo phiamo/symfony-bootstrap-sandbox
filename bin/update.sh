@@ -67,8 +67,7 @@ mkdir -p web/media
 
 # update source
 git pull
-git submodule init
-git submodule update
+
 MDBOTHAFTER="$(md5sum composer.json composer.lock)"
 if [ $WITHCOMPOSERUPDATE == 1 ]; then
     if [ "$MDBOTHBEFORE" != "$MDBOTHAFTER" ]; then
@@ -78,15 +77,13 @@ if [ $WITHCOMPOSERUPDATE == 1 ]; then
 fi
 
 if [ $WITHDB = 1 ]; then
-# create db
-$APP doctrine:database:drop --force
-$APP doctrine:database:create
-$APP doctrine:schema:update --force
-$APP init:acl
-$APP doctrine:fixtures:load -v
+    # create db
+    $APP doctrine:database:drop --force
+    $APP doctrine:database:create
+    $APP doctrine:schema:update --force
+    $APP init:acl
+    $APP doctrine:fixtures:load -v
 fi
-
-$APP cache:clear
 
 # dump dev assets
 $APP assets:install --symlink web
@@ -99,8 +96,11 @@ if [ $UPDATEPROD = 0 ]; then
 fi
 
 echo "RUNNING CHMOD AS $APACHE_RUN_USER:$APACHE_RUN_GROUP on $dirs"
+
 app/console cache:clear --env=prod --no-debug
+
 echo "restarting your webserver:"
+
 if [ -e "/etc/init.d/apache2" ]; then
     sudo /etc/init.d/apache2 restart
 elif [ -e "/etc/init.d/nginx" ]; then
