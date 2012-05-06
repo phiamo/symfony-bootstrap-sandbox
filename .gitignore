@@ -36,3 +36,4 @@ app/config/parameters.yml
 # ignore MopaRemoteUpdateBundle bin files
 bin/post-composer.sh
 bin/envvars.default
+app/Resources/remote_update.sqlite
