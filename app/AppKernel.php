@@ -22,6 +22,11 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Mopa\Bundle\BootstrapSandboxBundle\MopaBootstrapSandboxBundle(),
+	        new Mopa\Bundle\RemoteUpdateBundle\MopaRemoteUpdateBundle(),
+	        new Escape\WSSEAuthenticationBundle\EscapeWSSEAuthenticationBundle(),
+	        new Sensio\Bundle\BuzzBundle\SensioBuzzBundle(),
+	    	new FOS\RestBundle\FOSRestBundle(),
+	    	new JMS\SerializerBundle\JMSSerializerBundle($this)
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

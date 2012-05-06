@@ -3,6 +3,8 @@ imports:
     - { resource: security.yml }
     - { resource: @MopaBootstrapSandboxBundle/Resources/config/examples/example_menu.yml }
     - { resource: @MopaBootstrapSandboxBundle/Resources/config/examples/example_navbar.yml }
+    - { resource: @MopaRemoteUpdateBundle/Resources/config/config.yml }
+    - { resource: @MopaRemoteUpdateBundle/Resources/config/database.yml }
 
 framework:
     #esi:             ~
@@ -73,3 +75,16 @@ swiftmailer:
 mopa_bootstrap:
     navbar: ~
     form: ~
+    
+
+mopa_remote_update:
+    remotes:
+        vserverli2:
+            preUpdate: git pull
+            url: http://bootstrap.mohrenweiserpartner.de/
+#            url: http://bootstrap/app_dev.php
+            username: %mopa_remote_update_user%
+            password: %mopa_remote_update_password%
+            updater: live
+    composer: /usr/sbin/composer.phar
+
