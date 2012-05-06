@@ -115,4 +115,4 @@ fi
 app/console assets:install --env=prod web
 app/console assetic:dump --env=prod --no-debug
 sudo chown $APACHE_RUN_USER.$APACHE_RUN_GROUP -R $dirs
-sudo chmod 765 -R $dirs
+sudo chmod 775 -R $dirs
