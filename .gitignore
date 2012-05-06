@@ -32,4 +32,7 @@ web/.htaccess
 
 # ignore parameters so everone can have its own
 app/config/parameters.yml
+
+# ignore MopaRemoteUpdateBundle bin files
 bin/post-composer.sh
+bin/envvars.default
