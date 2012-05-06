@@ -81,10 +81,9 @@ mopa_remote_update:
     remotes:
         vserverli2:
             preUpdate: git pull
-            url: http://bootstrap.mohrenweiserpartner.de/
-#            url: http://bootstrap/app_dev.php
+            url: http://bootstrap.mohrenweiserpartner.de
             username: %mopa_remote_update_user%
             password: %mopa_remote_update_password%
-            updater: live
+            updater: cron
     composer: /usr/sbin/composer.phar
 
