@@ -30,5 +30,6 @@ web/media/*
 web/.htaccess
 
 
-# ignore paypal so everone can have its own
+# ignore parameters so everone can have its own
 app/config/parameters.yml
+bin/post-composer.sh
