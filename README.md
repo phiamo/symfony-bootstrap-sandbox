@@ -16,5 +16,14 @@ We have a instance of this running here:
     
 So it should work, "out of the box", but if it doesnt, open issues make PR's etc.
 
+To install it just:
+
+```
+git clone git://github.com/phiamo/symfony-bootstrap-sandbox.git
+cd symfony-bootstrap-sandbox
+cp app/config/parameters.yml.default app/config/parameters.yml
+composer.phar install
+```
+
 
 
