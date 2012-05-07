@@ -80,7 +80,8 @@ if [ $WITHDB = 1 ]; then
     # create db
     $APP doctrine:database:drop --force
     $APP doctrine:database:create
-    $APP doctrine:schema:update --force
+    $APP doctrine:schema:drop --force
+    $APP doctrine:schema:create
     $APP init:acl
     $APP doctrine:fixtures:load -v
 fi
