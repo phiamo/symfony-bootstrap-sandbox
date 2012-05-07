@@ -23,7 +23,7 @@ class AppKernel extends Kernel
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Mopa\Bundle\BootstrapSandboxBundle\MopaBootstrapSandboxBundle(),
 	        new Mopa\Bundle\RemoteUpdateBundle\MopaRemoteUpdateBundle(),
-	        new Escape\WSSEAuthenticationBundle\EscapeWSSEAuthenticationBundle(),
+	        new Mopa\Bundle\WSSEAuthenticationBundle\MopaWSSEAuthenticationBundle(),
 	        new Sensio\Bundle\BuzzBundle\SensioBuzzBundle(),
 	    	new FOS\RestBundle\FOSRestBundle(),
 	    	new JMS\SerializerBundle\JMSSerializerBundle($this)
