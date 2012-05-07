@@ -14,15 +14,11 @@ scriptPath=$(readlink -f "${0%/*}")
 APP="app/console"
 APACHE_RUN_USER="${APACHE_RUN_USER-www-data}"
 APACHE_RUN_GROUP="${APACHE_RUN_GROUP-www-data}"
-dirs="${dirs-app/cache app/logs}"
+dirs="${dirs-app/cache app/logs web/media/ web/images/barcode_playground}"
 COMPOSER="$(which composer.phar)"
 UPDATEPROD=1
 WITHDB=0
 WITHCOMPOSERUPDATE=1
-
-if [ -e "$scriptPath/envvars" ]; then
-    . $scriptPath/envvars
-fi
 
 function usage() {
     cat << EOF
@@ -60,7 +56,10 @@ while getopts "hpcd:" OPTION ; do
     esac
 done
 
-dirs="${dirs-app/cache app/logs web/media/ web/images/barcode_playground}"
+if [ -e "$scriptPath/envvars" ]; then
+    . $scriptPath/envvars
+fi
+
 
 MDBOTHBEFORE="$(md5sum composer.json composer.lock)"
 
