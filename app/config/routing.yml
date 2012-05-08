@@ -3,7 +3,7 @@
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
 
-_mopa_bootstrap:
+MopaBootstrapSandbox:
     resource: "@MopaBootstrapSandboxBundle/Controller"
     type:     annotation
 

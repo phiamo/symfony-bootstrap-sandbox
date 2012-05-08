@@ -32,7 +32,6 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    # java: /usr/bin/java
     filters:
         less:
             node: /usr/bin/node
@@ -42,8 +41,6 @@ assetic:
         cssembed:
             jar: %kernel.root_dir%/Resources/java/cssembed-0.3.6.jar
             apply_to: "\.css$|\.less$"
-        # closure:
-        #     jar: %kernel.root_dir%/java/compiler.jar
         yui_css:
             jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar
             apply_to: "\.css$"
