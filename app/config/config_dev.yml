@@ -22,9 +22,6 @@ monolog:
 assetic:
     debug:          %kernel.debug%
     use_controller: true
-    filters:
-        yui_css:
-            jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar
 
 services:
     twig.extension.debug:
