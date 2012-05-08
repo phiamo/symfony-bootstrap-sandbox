@@ -11,6 +11,7 @@ git clone git://github.com/phiamo/symfony-bootstrap-sandbox.git
 cd symfony-bootstrap-sandbox
 cp app/config/parameters.yml.default app/config/parameters.yml
 composer.phar install
+app/console assetic:dump
 ```
 
 For symfony-bootstrap to work out of the box its required to have less installed:
