@@ -14,11 +14,14 @@ composer.phar install
 app/console assetic:dump
 ```
 
-For symfony-bootstrap to work out of the box its required to have less installed:
+For symfony-bootstrap to work out of the box its required to have less installed.
 
 - [Less installation](https://github.com/phiamo/MopaBootstrapBundle/blob/master/Resources/doc/less-installation.md)
 
-What it is made of:
+Mac users please note the known issues at the bottom
+
+What it is made of
+------------------
 
 - [Symfony2](http://symfony.com/) - Symfony2
 - [bootstrap](http://github.com/twitter/bootstrap) - Twitter's Bootstrap
