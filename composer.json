@@ -24,7 +24,8 @@
         "knplabs/knp-paginator-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "dev-master",
         "craue/formflow-bundle": "dev-master",
-        "mopa/remote-update-bundle": "dev-master"
+        "mopa/remote-update-bundle": "dev-master",
+        "liip/theme-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

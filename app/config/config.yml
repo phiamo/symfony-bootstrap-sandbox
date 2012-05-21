@@ -63,7 +63,9 @@ swiftmailer:
 mopa_bootstrap:
     navbar: ~
     form: ~
-    
+    initializr:
+        google:
+            analytics: UA-17161773-2
 
 mopa_remote_update:
     remotes:
@@ -76,3 +78,13 @@ mopa_remote_update:
             updater: cron
     composer: /usr/sbin/composer.phar
 
+liip_theme:
+    themes: ['bootstrap', 'initializr']
+    active_theme: 'bootstrap'
+    cookie:
+        name: LiipThemeCookie
+        lifetime: 31536000 # 1 year in seconds
+        path: /
+        domain: ~
+        secure: false
+        http_only: false

@@ -15,3 +15,7 @@ _welcome:
 MopaUpdateBundle:
     type:     rest
     resource: "@MopaRemoteUpdateBundle/Resources/config/routing.yml"
+    
+liip_theme:
+    resource: "@LiipThemeBundle/Resources/config/routing.xml"
+    prefix: /theme
