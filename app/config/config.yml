@@ -63,7 +63,12 @@ swiftmailer:
 
 mopa_bootstrap:
     navbar: ~
-    form: ~
+    form: 
+        collection:
+            widget_remove_btn:
+                icon: trash
+            widget_add_btn:
+                icon: plus-sign
     initializr:
         google:
             analytics: UA-17161773-2
