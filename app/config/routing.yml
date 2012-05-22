@@ -3,10 +3,10 @@
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
 
-MopaBootstrapSandbox:
-    resource: "@MopaBootstrapSandboxBundle/Controller"
-    type:     annotation
 
+MopaBootstrapSandbox:
+    resource: "@MopaBootstrapSandboxBundle/Resources/config/routing.yml"
+    
 _welcome:
     pattern:   /
     defaults:  { _controller: MopaBootstrapSandboxBundle:Examples:index }
@@ -16,6 +16,3 @@ MopaUpdateBundle:
     type:     rest
     resource: "@MopaRemoteUpdateBundle/Resources/config/routing.yml"
     
-liip_theme:
-    resource: "@LiipThemeBundle/Resources/config/routing.xml"
-    prefix: /theme

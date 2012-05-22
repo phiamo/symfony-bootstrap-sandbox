@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: @MopaBootstrapSandboxBundle/Resources/config/themes.yml }
     - { resource: @MopaBootstrapSandboxBundle/Resources/config/examples/example_menu.yml }
     - { resource: @MopaBootstrapSandboxBundle/Resources/config/examples/example_navbar.yml }
     - { resource: @MopaRemoteUpdateBundle/Resources/config/config.yml }
@@ -77,14 +78,3 @@ mopa_remote_update:
             password: %mopa_remote_update_password%
             updater: cron
     composer: /usr/sbin/composer.phar
-
-liip_theme:
-    themes: ['bootstrap', 'initializr']
-    active_theme: 'bootstrap'
-    cookie:
-        name: LiipThemeCookie
-        lifetime: 31536000 # 1 year in seconds
-        path: /
-        domain: ~
-        secure: false
-        http_only: false
