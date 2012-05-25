@@ -1,5 +1,5 @@
 {
-    "name": "mopa/symfony-bootstrap-sandbox",
+    "name": "mopa/symfony-bootstrap",
     "description": "Sandbox for starting with symfony2 and bootstrap2",
     "autoload": {
         "psr-0": { "": "src/" }
