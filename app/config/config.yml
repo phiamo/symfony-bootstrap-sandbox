@@ -62,7 +62,6 @@ swiftmailer:
     password:  %mailer_password%
 
 mopa_bootstrap:
-    navbar: ~
     form: 
         collection:
             widget_remove_btn:
